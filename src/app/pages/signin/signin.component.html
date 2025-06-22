@@ -1,1 +1,10 @@
-<p>signin works!</p>
+<div style="text-align: center; margin-top: 48px;">
+  <button nz-button nzType="default" nzShape="circle" style="position: absolute; left: 24px; top: 24px;" (click)="goBack()">
+    <span nz-icon nzType="arrow-left"></span>
+  </button>
+
+  <h2>Position your face in front of the camera.</h2>
+  <video #videoElement width="320" height="240" autoplay style="border-radius: 12px; background: #eee;"></video>
+  <div *ngIf="!faceDetected" style="margin-top: 16px;">Waiting for face...</div>
+  <div *ngIf="faceDetected" style="margin-top: 16px; color: green; font-weight: bold;">Face detected!</div>
+</div>

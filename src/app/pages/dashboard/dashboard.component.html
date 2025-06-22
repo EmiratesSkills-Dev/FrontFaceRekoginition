@@ -1,1 +1,16 @@
-<p>dashboard works!</p>
+<div *ngIf="user; else noUser">
+  <div style="max-width:400px; margin:auto; padding-top:40px; text-align:center; box-shadow:0 2px 8px rgba(0,0,0,0.05); border-radius:8px; background:#fff; padding-bottom:40px;">
+    <h2 style="margin-bottom:20px;">Welcome, {{ user.name }}</h2>
+    <img [src]="photoUrl"
+         alt="User Photo"
+         style="width: 150px; height:150px; object-fit:cover; border-radius: 50%; border: 2px solid #eee; margin-bottom:20px;" />
+    <br />
+    <button nz-button nzType="primary" (click)="logout()">Logout</button>
+  </div>
+</div>
+
+<ng-template #noUser>
+  <div style="max-width:400px; margin:auto; padding-top:40px; text-align:center;">
+    <p>User data not found. Redirecting...</p>
+  </div>
+</ng-template>

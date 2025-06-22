@@ -1,0 +1,15 @@
+ .register-wrapper {
+  min-height: 100vh;                
+  display: flex;
+  align-items: center;                
+  justify-content: center;           
+  background: #f5f6fa;                
+}
+
+form[nz-form] {
+  background: #fff;
+  padding: 32px 28px 24px 28px;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  min-width: 320px;
+}

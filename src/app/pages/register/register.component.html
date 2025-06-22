@@ -1,1 +1,17 @@
-<p>register works!</p>
+<div class="register-wrapper">
+  <form nz-form (ngSubmit)="onSubmit()" [formGroup]="registerForm" style="max-width:400px;width:100%;">
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6">Name</nz-form-label>
+      <nz-form-control [nzSpan]="14">
+        <input nz-input formControlName="Name" required />
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6">Photo</nz-form-label>
+      <nz-form-control [nzSpan]="14">
+        <input nz-input type="file" accept="image/*" (change)="onFileChange($event)" required />
+      </nz-form-control>
+    </nz-form-item>
+    <button nz-button nzType="primary" [disabled]="registerForm.invalid || !photoFile">Register</button>
+  </form>
+</div>
