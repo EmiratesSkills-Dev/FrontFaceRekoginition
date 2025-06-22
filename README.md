@@ -1,27 +1,73 @@
-# TempFace
+# 🚀 Running Angular 17 Project on Windows
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+This guide explains how to set up your Windows machine and run an Angular 17 project.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## ✅ 1. Install Node.js (v18.x or newer)
 
-## Code scaffolding
+Angular 17 requires Node.js version **18.x** or **20.x**.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Download from: [https://nodejs.org](https://nodejs.org)
+- Install the **LTS** version and keep the default options.
+- After installation, verify:
 
-## Build
+```bash
+node -v
+npm -v
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## ✅ 2. Install Angular CLI
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Install Angular CLI globally using npm:
 
-## Running end-to-end tests
+```bash
+npm install -g @angular/cli@17
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Check if it installed correctly:
 
-## Further help
+```bash
+ng version
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+---
+
+## ✅ 3. Install Project Dependencies
+
+Navigate to your Angular project folder:
+
+```bash
+cd path/to/your-project
+```
+
+Install all dependencies:
+
+```bash
+npm install
+```
+
+---
+
+## ✅ 4. Run the Project
+
+Start the development server:
+
+```bash
+ng serve
+```
+
+The app will be available at:
+
+```
+http://localhost:4200
+```
+
+---
+
+## 📝 Notes
+
+- Make sure you are using Node 18 or later. You can switch versions using [nvm for Windows](https://github.com/coreybutler/nvm-windows) if needed.
+- The `package.json` must be correctly configured with Angular 17 dependencies.
